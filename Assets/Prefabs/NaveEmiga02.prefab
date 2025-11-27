@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8398137777029177744}
   - component: {fileID: 7670982459217313045}
   - component: {fileID: 8831910249204601143}
+  - component: {fileID: 367178053226864953}
   m_Layer: 0
   m_Name: NaveEmiga02
   m_TagString: Untagged
@@ -159,12 +160,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 253d208d296efdb4a98a33d7769c56d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBehaviour
-  velocidad: 1
+  velocidad: 3
   proyectilPrefab: {fileID: 1440914865244322351, guid: 2baaae056e81e97448fc5149d2baddeb, type: 3}
   puntoDisparo: {fileID: 6945427052771613001}
   velocidadDisparo: 15
   tiempoDisparo: 1
   refrescoDisparo: 0
+--- !u!114 &367178053226864953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5158124571475173625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e192725f718d544b9b52b4ea63755b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SistemaVida
+  vidaMaxima: 75
+  explosionPrefab: {fileID: 3641129512107132821, guid: 0336a42edb03e7d4ab95e92344765a1e, type: 3}
 --- !u!1 &5705848911155821951
 GameObject:
   m_ObjectHideFlags: 0

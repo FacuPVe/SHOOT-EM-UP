@@ -40,7 +40,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void MovimientoName()
     {
-        Debug.Log(this.transform.position.x);
+        //Debug.Log(this.transform.position.x);
         Vector2 movimiento = new Vector2(1, 0f) * velocidad * Time.deltaTime;
         transform.Translate(movimiento);
     }

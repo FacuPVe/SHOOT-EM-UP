@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a453dd51eb32c324f800255bf1304a03
+guid: 3840e38ccf2c1704daed505b5b97aad8
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -100,42 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Star_Tiles_0
+      name: Star_Tiles 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3
-        height: 3
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline:
-      - - {x: 0, y: -8}
-        - {x: 11.5, y: 0}
-        - {x: 0, y: 8}
-        - {x: -11.5, y: 0}
-      physicsShape:
-      - - {x: 0, y: -8}
-        - {x: 11.5, y: 0}
-        - {x: 0, y: 8}
-        - {x: -11.5, y: 0}
-      tessellationDetail: -1
-      bones: []
-      spriteID: b5bbf5507a360ba90800000000000000
-      internalID: -7300225426966725797
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Star_Tiles_1
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 0
-        width: 26
+        width: 112
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -145,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c124ab012a06d54c912cc518562d8ac
-      internalID: 1534398790
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Star_Tiles_2
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 27
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1865b791ad1c81e4cb15f94f2b0fe928
-      internalID: -1909198014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Star_Tiles_3
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 0
-        width: 31
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53603098a32921747bfd667efcb90094
-      internalID: -1898457444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Star_Tiles_4
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1040ee362e5460743b45d91510121cb5
-      internalID: -836499410
+      spriteID: 53cc63e4d961eab43b98c730c6a4b7f3
+      internalID: -1719022545
       vertices: []
       indices: 
       edges: []
@@ -233,15 +137,9 @@ TextureImporter:
       - key: SpriteEditor.SliceOnImport
         value: False
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Star_Tiles_0: -7300225426966725797
-      Star_Tiles_1: 1534398790
-      Star_Tiles_2: -1909198014
-      Star_Tiles_3: -1898457444
-      Star_Tiles_4: -836499410
-      Star_Tiles_5: 712645360
-      Star_Tiles_6: 725002768
+      Star_Tiles 1_0: -1719022545
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

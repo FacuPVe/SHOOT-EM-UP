@@ -165,7 +165,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.94, y: 0.43}
+  m_Size: {x: 0.68, y: 0.2}
   m_EdgeRadius: 0
 --- !u!114 &6591737313172332197
 MonoBehaviour:
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffd0fc66a087d443bbdbfbb257f810e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MisilBehaviour
-  misileTime: 3
+  misileTime: 1
 --- !u!82 &-2800986772136134402
 AudioSource:
   m_ObjectHideFlags: 0

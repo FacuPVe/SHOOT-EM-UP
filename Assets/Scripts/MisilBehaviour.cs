@@ -15,7 +15,7 @@ public class MisilBehaviour : MonoBehaviour
     void Update()
     {
         shootedTime += Time.deltaTime;
-        Debug.Log(shootedTime);
+        //Debug.Log(shootedTime);
         if (misileTime <= shootedTime)
         {
             DestroyMisile();
@@ -24,8 +24,20 @@ public class MisilBehaviour : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(collision.gameObject);
+        Debug.Log("Misil impactado01");
+
+        // Buscar si el objetivo con el que se hace colisión tiene sistema de vida
+        SistemaVida vidaObjetivo = collision.GetComponent<SistemaVida>();
+
+        if (vidaObjetivo != null)
+        {
+            vidaObjetivo.RecibirDaño(25);
+        }
+
+        // Detruir misil al impactar
         DestroyMisile();
+
+
     }
 
     private void DestroyMisile()
