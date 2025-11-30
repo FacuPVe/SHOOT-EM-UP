@@ -14,7 +14,7 @@ public class CameraMovement : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.right * Time.deltaTime * movingSpeed;
-        if (transform.position.x >= 117)
+        if (transform.position.x >= 186)
         {
             movingSpeed = 0f;
         }

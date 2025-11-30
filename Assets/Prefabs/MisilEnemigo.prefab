@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1947153639878938835}
   - component: {fileID: 6591737313172332197}
   - component: {fileID: -2800986772136134402}
+  - component: {fileID: 934244339583503651}
   m_Layer: 0
   m_Name: MisilEnemigo
   m_TagString: Untagged
@@ -151,7 +152,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -277,3 +278,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &934244339583503651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440914865244322351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e192725f718d544b9b52b4ea63755b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SistemaVida
+  vidaMaxima: 0
+  explosionPrefab: {fileID: 3641129512107132821, guid: 0336a42edb03e7d4ab95e92344765a1e, type: 3}

@@ -38,12 +38,60 @@ public class ControlNave : MonoBehaviour
         float movimientoVertical = Input.GetAxis("Vertical");
 
         Vector2 movimiento = new Vector2(movimientoHorizontal, movimientoVertical) * velocidad * Time.deltaTime;
-        transform.Translate(movimiento);
+        
+        // Calcular la nueva posición
+        Vector3 nuevaPosicion = transform.position + (Vector3)movimiento;
+        
+        // Obtener los límites de la cámara
+        Camera cam = Camera.main;
+        if (cam != null)
+        {
+            float alturaCamara = cam.orthographicSize;
+            float anchoCamara = alturaCamara * cam.aspect;
+            
+            float limiteIzquierdo = cam.transform.position.x - anchoCamara;
+            float limiteDerecho = cam.transform.position.x + anchoCamara;
+            float limiteInferior = cam.transform.position.y - alturaCamara;
+            float limiteSuperior = cam.transform.position.y + alturaCamara;
+            
+            nuevaPosicion.x = Mathf.Clamp(nuevaPosicion.x, limiteIzquierdo, limiteDerecho);
+            nuevaPosicion.y = Mathf.Clamp(nuevaPosicion.y, limiteInferior, limiteSuperior);
+        }
+        
+        transform.position = nuevaPosicion;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        // Deestruir la nave cuando toca alguna estructura (meteoritos y decorados)
-        Destroy(this.gameObject);
+        MisilBehaviour misil = collision.GetComponent<MisilBehaviour>();
+        SistemaVida vidaObjetivo = collision.GetComponent<SistemaVida>();
+        
+        if (misil == null)
+        {
+            if (vidaObjetivo != null)
+            {
+                // Daño letal al enemigo
+                vidaObjetivo.RecibirDaño(1000); 
+                
+                // Daño letal al jugador
+                SistemaVida miSistemaVida = GetComponent<SistemaVida>();
+                if (miSistemaVida != null)
+                {
+                    miSistemaVida.RecibirDaño(1000);
+                }
+            }
+            else
+            {
+                SistemaVida miSistemaVida = GetComponent<SistemaVida>();
+                if (miSistemaVida != null)
+                {
+                    miSistemaVida.RecibirDaño(1000);
+                }
+                else
+                {
+                    Destroy(this.gameObject);
+                }
+            }
+        }
     }
 }

@@ -20,7 +20,7 @@ public class EnemyBehaviour : MonoBehaviour
     void Update()
     {
         MovimientoName();
-        if (refrescoDisparo > tiempoDisparo)
+        if (refrescoDisparo > tiempoDisparo && EstaEnCamara())
         {
             Disparar();
             refrescoDisparo = 0f;
@@ -43,5 +43,27 @@ public class EnemyBehaviour : MonoBehaviour
         //Debug.Log(this.transform.position.x);
         Vector2 movimiento = new Vector2(1, 0f) * velocidad * Time.deltaTime;
         transform.Translate(movimiento);
+    }
+
+    private bool EstaEnCamara()
+    {
+        Camera cam = Camera.main;
+        if (cam == null)
+        {
+            return false;
+        }
+
+        float alturaCamara = cam.orthographicSize;
+        float anchoCamara = alturaCamara * cam.aspect;
+
+        float limiteIzquierdo = cam.transform.position.x - anchoCamara;
+        float limiteDerecho = cam.transform.position.x + anchoCamara;
+        float limiteInferior = cam.transform.position.y - alturaCamara;
+        float limiteSuperior = cam.transform.position.y + alturaCamara;
+
+        // Verificar si el enemigo está dentro de los límites de la cámara
+        Vector3 posicion = transform.position;
+        return posicion.x >= limiteIzquierdo && posicion.x <= limiteDerecho &&
+               posicion.y >= limiteInferior && posicion.y <= limiteSuperior;
     }
 }
